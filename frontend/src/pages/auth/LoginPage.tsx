@@ -7,7 +7,7 @@ import { BookOpen, Eye, EyeOff } from 'lucide-react';
 import { authService } from '../../services/auth.service';
 import { useAuthStore } from '../../store/useAuthStore';
 import toast from 'react-hot-toast';
-
+import LOGO from '../../assets/logo.png';
 const schema = z.object({ email: z.string().email(), password: z.string().min(1, 'Password required') });
 type Form = z.infer<typeof schema>;
 
@@ -40,7 +40,7 @@ export default function LoginPage() {
         <div className="card p-8">
           <div className="flex justify-center mb-6">
             <div className="flex items-center gap-2 font-display font-bold text-brand-700 text-xl">
-              <BookOpen className="h-7 w-7" /> Digitalindian
+             <img src={LOGO} alt="Logo" className="h-10" />
             </div>
           </div>
           <h1 className="text-2xl font-display font-bold text-gray-900 text-center mb-1">Welcome back</h1>
