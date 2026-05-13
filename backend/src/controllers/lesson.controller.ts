@@ -237,7 +237,7 @@ export const getPlaybackFrame = async (req: AuthRequest, res: Response, next: Ne
 </head>
 <body>
 <iframe
-  src="https://www.youtube.com/embed/${vid}?autoplay=0&controls=1&rel=0&modestbranding=1&origin=http://localhost:5173"
+  src="https://www.youtube.com/embed/${vid}?autoplay=0&controls=1&rel=0&modestbranding=1&origin=https://lms.digitalindian.org"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
   allowfullscreen
   referrerpolicy="strict-origin-when-cross-origin"
@@ -253,7 +253,7 @@ export const getPlaybackFrame = async (req: AuthRequest, res: Response, next: Ne
 
     res.setHeader(
       'Content-Security-Policy',
-      "frame-ancestors 'self' http://localhost:5173 http://localhost:3000"
+      "frame-ancestors 'self' https://lms.digitalindian.org"
     );
 
     res.send(html);

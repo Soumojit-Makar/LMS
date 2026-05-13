@@ -27,9 +27,9 @@ export async function connectDB(): Promise<typeof mongoose> {
 
     console.log('✅ MongoDB connected');
     return cached;
-  } catch (err) {
+  } catch (error) {
     cached = null;
-    console.error('❌ MongoDB connection error:', err);
-    throw err;
+    console.error('❌ MongoDB connection error:', error);
+    throw error;
   }
 }

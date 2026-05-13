@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="flex items-center gap-3">
             {!user ? (
               <>
-                <Link to="/login" className="btn-secondary text-sm py-2 px-4">Log in</Link>
+                <Link to="/" className="btn-secondary text-sm py-2 px-4">Log in</Link>
                 <Link to="/register" className="btn-primary text-sm py-2 px-4">Get started</Link>
               </>
             ) : (
