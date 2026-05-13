@@ -119,12 +119,20 @@ export default function ProfilePage() {
           <div>
             <label className="label">Current password</label>
             <input {...rpw('currentPassword')} type="password" className="input" />
-            {epw.currentPassword && <p className="mt-1 text-xs text-red-500">{epw.currentPassword.message}</p>}
+            {epw.currentPassword?.message && (
+              <p className="mt-1 text-xs text-red-500">
+                {String(epw.currentPassword.message)}
+              </p>
+            )}
           </div>
           <div>
             <label className="label">New password</label>
             <input {...rpw('newPassword')} type="password" className="input" />
-            {epw.newPassword && <p className="mt-1 text-xs text-red-500">{epw.newPassword.message}</p>}
+            {epw.newPassword?.message && (
+              <p className="mt-1 text-xs text-red-500">
+                {String(epw.newPassword.message)}
+              </p>
+            )}
           </div>
           <button type="submit" disabled={ispw} className="btn-primary">{ispw ? 'Updating…' : 'Update password'}</button>
         </form>

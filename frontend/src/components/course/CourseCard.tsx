@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { Star, Users, Clock } from 'lucide-react';
 import { formatCurrency, formatDuration } from '../../utils/format';
 
-interface Course {
+export interface Course {
+  _id: string;
   slug: string; title: string; thumbnail: { url: string }; shortDescription: string;
   trainer: { name: string }; pricing: { isFree: boolean; price: number; discountPrice?: number };
   ratingAverage: number; ratingCount: number; enrollmentCount: number; totalDuration: number; level: string;
