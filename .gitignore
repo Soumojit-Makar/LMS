@@ -1,0 +1,51 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+dist/
+build/
+.next/
+
+# env files
+.env
+.env.local
+.env.*.local
+
+# Vercel
+.vercel/
+
+# misc
+.DS_Store
+*.log
+coverage/
+*/*.log
+/node_modules/
+/.pnp
+.pnp.js
+/.vscode/
+.idea/
+/.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+/*.env
+/*.env.example
+*/backend/scripts
+*/scripts
+*/.env
+*/.env.local
+*/.env.*.local
+*/.vscode/
+*/.idea/
+*.env.example
+.env.example
+*.log
+logs/
+/*.env.*
+/.env
+/.env.local
+/backend/scripts/createAdmin.ts
+*/scripts/createAdmin.ts

@@ -1,0 +1,17 @@
+{
+  "name": "digitalindian-lms",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Production-ready LMS for Digitalindian Skill Academy",
+  "scripts": {
+  "dev:frontend": "cd frontend && npm run dev",
+  "dev:backend": "cd backend && npm run dev",
+  "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+  "build": "cd frontend && npm run build && cd ../backend && npm run build",
+  "seed:admin": "cd backend && npm run seed:admin"
+},
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "typescript": "^5.4.5"
+  }
+}
